@@ -45,17 +45,17 @@ const Content = ({ contentProps }) => {
       </div>
       <div className="content4">
         <div className="all-score">
-          <p>{Math.round(contentProps.minScore)}</p>
+          <p>{contentProps.minScore === 'Null' ? 'Null' : Math.round(contentProps.minScore)}</p>
           <p>คะแนนต่ำสุด 60</p>
         </div>
         <div className="vertical-line"></div>
         <div className="all-score">
-          <p>{Math.round(contentProps.avgScore)}</p>
+          <p>{contentProps.avgScore === 'Null' ? 'Null' : Math.round(contentProps.avgScore)}</p>
           <p>คะแนนเฉลี่ย 60</p>
         </div>
         <div className="vertical-line"></div>
         <div className="all-score">
-          <p>{Math.round(contentProps.maxScore)}</p>
+          <p>{contentProps.maxScore === 'Null' ? 'Null' : Math.round(contentProps.maxScore)}</p>
           <p>คะแนนสูงสุด 60</p>
         </div>
       </div>
