@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import Container from './components/Container';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [state, setstate] = useState([]);
+  useEffect(() => {
+    axios.get('https://tcas-assets.skooldio.com/tmp/mock_tcaster_api.json')
+      .then(res => setstate([...res.data]))
+      .catch(err => console.log(err))
+  }, [])
+
+  console.log(state);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {state[0] && state.map(data => (
+        <Container key={data.id} props={data} />
+      ))}
     </div>
   );
 }

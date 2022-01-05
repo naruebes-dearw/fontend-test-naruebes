@@ -1,0 +1,94 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  row-gap: 20px;
+}
+
+.content1 {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.round-num {
+  display: flex;
+  column-gap: 10px;
+}
+
+.round-num div {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-grey {
+  background-color: grey;
+}
+
+.content2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+}
+
+.fix-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  padding: 7px 10px;
+  border: 1px solid red;
+  border-radius: 20px;
+}
+
+.operators {
+  display: grid;
+  place-items: center;
+}
+
+.content3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score p:nth-child(1) {
+  text-align: end;
+  font-size: 12px;
+}
+.score p:nth-child(2) {
+  font-size: 40px;
+}
+
+.star {
+  padding: 0 40px;
+}
+
+.content4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 30px;
+  background-color: grey;
+}
+
+.all-score p:nth-child(1) {
+  font-size: 30px;
+}
+.all-score p:nth-child(2) {
+  font-size: 13px;
+}
